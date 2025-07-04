@@ -1,0 +1,15 @@
+{"timestamp":"2025-07-03T23:57:35.025695","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-07-03T23:57:35.026172","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/sec_filings_indexer_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-07-03T23:57:39.794773Z","level":"info","event":"[fetch_10K_docs] Starting fetch_10K_docs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T23:57:40.589632Z","level":"info","event":"[fetch_10K_docs] Fetched 5 filings.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T23:57:40.600251Z","level":"info","event":"CSV generado en: /opt/airflow/output/appl_10k.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T23:57:40.614431Z","level":"info","event":"  formType  ... companyName","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T23:57:40.616562Z","level":"info","event":"0     10-K  ...  Apple Inc.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T23:57:40.617556Z","level":"info","event":"1     10-K  ...  Apple Inc.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T23:57:40.618512Z","level":"info","event":"2     10-K  ...  Apple Inc.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T23:57:40.618676Z","level":"info","event":"3     10-K  ...  Apple Inc.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T23:57:40.618781Z","level":"info","event":"4     10-K  ...  Apple Inc.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T23:57:40.619386Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T23:57:40.619552Z","level":"info","event":"[5 rows x 4 columns]","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T23:57:40.617272","level":"info","event":"Done. Returned value was:   formType  ... companyName\n0     10-K  ...  Apple Inc.\n1     10-K  ...  Apple Inc.\n2     10-K  ...  Apple Inc.\n3     10-K  ...  Apple Inc.\n4     10-K  ...  Apple Inc.\n\n[5 rows x 4 columns]","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}
+{"timestamp":"2025-07-03T23:57:40.617544","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('0197d2b9-6056-71e5-bcc8-f4eae859e23b'), task_id='fetch_task', dag_id='sec_filings_indexer', run_id='manual__2025-07-03T23:57:33.618717+00:00', try_number=1, map_index=-1, hostname='a591eed23ee5', context_carrier=None, task=<Task(_PythonDecoratedOperator): fetch_task>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=0, start_date=datetime.datetime(2025, 7, 3, 23, 57, 34, 890728, tzinfo=TzInfo(UTC)), end_date=None, is_mapped=False)","logger":"task"}

@@ -1,0 +1,5 @@
+{"timestamp":"2025-07-04T02:42:05.795653","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-07-04T02:42:05.796090","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/rag_reporting_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-07-04T02:42:06.354045Z","level":"info","event":"Creando PDF en: /opt/airflow/output/Apple_10K_Summary_LOCAL_20250704.pdf","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-04T02:42:06.354187Z","level":"info","event":"PDF creado con éxito.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-04T02:42:06.197408","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}

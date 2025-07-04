@@ -1,0 +1,29 @@
+{"timestamp":"2025-07-03T16:18:00.876711","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-07-03T16:18:00.878039","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/sec_filings_indexer.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-07-03T16:18:05.534431","level":"info","event":"Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.","logger":"chromadb.telemetry.product.posthog"}
+{"timestamp":"2025-07-03T16:18:05.567040","level":"error","event":"Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given","logger":"chromadb.telemetry.product.posthog"}
+{"timestamp":"2025-07-03T16:18:05.567111","level":"error","event":"Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given","logger":"chromadb.telemetry.product.posthog"}
+{"timestamp":"2025-07-03T16:18:21.230298","level":"info","event":"Use pytorch device_name: cpu","logger":"sentence_transformers.SentenceTransformer"}
+{"timestamp":"2025-07-03T16:18:21.289648Z","level":"info","event":"[fetch_10K_docs] Starting fetch_10K_docs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:21.289825Z","level":"info","event":"[fetch_10K_docs] BASE_DIR: /opt/airflow/dags","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:21.289891Z","level":"info","event":"[fetch_10K_docs] OUTPUT_DIR: /opt/airflow/dags/output","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:21.289948Z","level":"info","event":"[fetch_10K_docs] CWD: /opt/airflow","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:21.290005Z","level":"info","event":"[fetch_10K_docs] BASE_DIR contents: ['sec_filings_indexer.py', 'document_indexing_pipeline.py', '__pycache__', 'example_dag.py']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:21.290063Z","level":"info","event":"[fetch_10K_docs] Ensured OUTPUT_DIR exists: True","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:21.290109Z","level":"info","event":"[fetch_10K_docs] OUTPUT_DIR contents after mkdir: []","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:21.290145Z","level":"info","event":"[fetch_10K_docs] Sending POST to https://api.sec-api.io with headers {'Authorization': '792ca02b4cbc590ff1b2e60bfd553839aa55f743134655cba5e98a8e1e997460', 'Content-Type': 'application/json'} and query {'query': 'ticker:AAPL AND formType:\"10-K\"', 'from': 0, 'size': 5, 'sort': [{'filedAt': {'order': 'desc'}}]}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:22.327937Z","level":"info","event":"[fetch_10K_docs] Received status: 200","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:22.331047Z","level":"info","event":"[fetch_10K_docs] Response snippet: {\"total\":{\"value\":32,\"relation\":\"eq\"},\"query\":{\"from\":0,\"size\":5},\"filings\":[{\"ticker\":\"AAPL\",\"formType\":\"10-K\",\"accessionNo\":\"0000320193-24-000123\",\"cik\":\"320193\",\"companyNameLong\":\"Apple Inc. (Filer","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:22.348990Z","level":"info","event":"[fetch_10K_docs] Fetched 5 filings.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:22.413286Z","level":"info","event":"CSV generado en: /opt/airflow/dags/output/appl_10k.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:22.435919Z","level":"info","event":"  formType  ... companyName","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:22.436252Z","level":"info","event":"0     10-K  ...  Apple Inc.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:22.436329Z","level":"info","event":"1     10-K  ...  Apple Inc.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:22.436397Z","level":"info","event":"2     10-K  ...  Apple Inc.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:22.436453Z","level":"info","event":"3     10-K  ...  Apple Inc.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:22.436821Z","level":"info","event":"4     10-K  ...  Apple Inc.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:22.437454Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:22.438266Z","level":"info","event":"[5 rows x 4 columns]","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:22.439678Z","level":"info","event":"[fetch_10K_docs] Final OUTPUT_DIR contents: ['appl_10k.csv']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-07-03T16:18:22.440698","level":"info","event":"Done. Returned value was:   formType  ... companyName\n0     10-K  ...  Apple Inc.\n1     10-K  ...  Apple Inc.\n2     10-K  ...  Apple Inc.\n3     10-K  ...  Apple Inc.\n4     10-K  ...  Apple Inc.\n\n[5 rows x 4 columns]","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}
+{"timestamp":"2025-07-03T16:18:22.441355","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('0197d114-a49e-71db-aede-09139783c09d'), task_id='fetch_task', dag_id='sec_filings_indexer', run_id='manual__2025-07-03T16:18:00.466488+00:00', try_number=1, map_index=-1, hostname='d1bee9c4f6a3', context_carrier=None, task=<Task(_PythonDecoratedOperator): fetch_task>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=0, start_date=datetime.datetime(2025, 7, 3, 16, 18, 0, 744643, tzinfo=TzInfo(UTC)), end_date=None, is_mapped=False)","logger":"task"}

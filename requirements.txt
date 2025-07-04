@@ -1,0 +1,10 @@
+chromadb
+sentence-transformers
+beautifulsoup4
+requests
+pandas
+langchain
+langchain-community
+reportlab
+torch
+accelerate

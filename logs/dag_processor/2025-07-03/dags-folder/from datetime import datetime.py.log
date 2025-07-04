@@ -1,0 +1,1 @@
+{"timestamp":"2025-07-03T16:34:04.360602","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/from datetime import datetime.py","logger":"airflow.models.dagbag.DagBag"}
